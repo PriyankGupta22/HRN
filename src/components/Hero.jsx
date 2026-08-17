@@ -6,6 +6,7 @@ import {
   FaFacebookF,
   FaTwitter,
 } from "react-icons/fa";
+
 import background from "../assets/background.png";
 import person from "../assets/person.png";
 import ProductCard from "./ProductCard";
@@ -13,14 +14,17 @@ import ProductCard from "./ProductCard";
 const Hero = () => {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-[#304958] text-white">
+
+      {/* BACKGROUND */}
       <img
         src={background}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 z-0 h-full w-full object-cover object-center"
       />
 
-      <div className="absolute inset-0 bg-[#203746]/10" />
+      <div className="absolute inset-0 z-[1] bg-[#203746]/10" />
 
+      {/* NAVBAR */}
       <header className="absolute left-0 top-0 z-50 flex w-full items-start justify-between px-5 pt-6 sm:px-8 sm:pt-7 lg:px-12 lg:pt-8">
         <div className="font-display text-[25px] leading-none sm:text-[28px] lg:text-[30px]">
           HΛN
@@ -45,6 +49,8 @@ const Hero = () => {
       </header>
 
       <div className="relative z-10 min-h-[100svh]">
+
+        {/* LEFT CONTENT */}
         <div className="absolute left-[4%] top-[28%] z-30 w-[40%] sm:top-[29%] sm:w-[37%] lg:top-[28%] lg:w-[34%]">
           <p className="mb-5 font-body text-[7px] uppercase tracking-[0.18em] text-white/55 sm:text-[8px] lg:mb-6 lg:text-[9px]">
             The future winter wear / 01 / series 01
@@ -78,12 +84,13 @@ const Hero = () => {
           </div>
 
           <div className="mt-8 flex items-center gap-5 sm:mt-9 sm:gap-6 lg:mt-10 lg:gap-8">
-            <button className="flex h-[78px] w-[78px] shrink-0 items-center justify-center rounded-[28%] border border-white/35 text-[23px] font-light transition-transform duration-300 hover:scale-105 sm:h-[88px] sm:w-[88px] lg:h-[105px] lg:w-[105px] lg:text-[27px]">
+            <button className="flex h-[78px] w-[78px] shrink-0 items-center justify-center rounded-[28%] border border-white text-[23px] font-light transition-transform duration-300 hover:scale-105 sm:h-[88px] sm:w-[88px] lg:h-[105px] lg:w-[105px] lg:text-[27px]">
               ↗
             </button>
 
-            <button className="font-body text-[9px] uppercase tracking-[0.16em] text-white transition-opacity hover:opacity-70 sm:text-[10px] lg:text-[11px]">
-              Add to Cart
+            <button className="font-body text-[6px] uppercase tracking-[0.16em] text-white transition-opacity hover:opacity-70 sm:text-[10px] lg:text-[11px] flex flex-col">
+              <div>ADD TO CART</div>
+              <div className="text-[30px]">$899.99</div>
             </button>
           </div>
         </div>
@@ -96,10 +103,21 @@ const Hero = () => {
           />
         </div>
 
-        <div className="absolute right-0 top-[27%] z-30 w-[29%] overflow-hidden sm:top-[28%] sm:w-[30%] lg:top-[27%] lg:w-[29%] border border-white">
+        <div className="absolute right-0 top-[27%] z-30 w-[29%] overflow-hidden sm:top-[28%] sm:w-[30%] lg:top-[27%] lg:w-[29%]">
           <div className="flex w-max items-start gap-4 lg:gap-5">
-            <ProductCard />
-            <ProductCard />
+            <ProductCard
+              title="ARTIC PUFFER"
+              subtitle="01 / WHITE"
+              price="$899.99"
+              color="white"
+            />
+
+            <ProductCard
+              title="ARTIC PUFFER"
+              subtitle="02 / SILVER"
+              price="$899.99"
+              color="silver"
+            />
           </div>
 
           <div className="flex w-[clamp(145px,15vw,255px)] justify-center gap-8 pt-4 font-body text-[7px] uppercase tracking-[0.18em] text-white/55 sm:text-[8px]">
@@ -126,6 +144,7 @@ const Hero = () => {
             <FaTwitter size={11} />
           </button>
         </div>
+
       </div>
     </section>
   );

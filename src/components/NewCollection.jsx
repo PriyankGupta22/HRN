@@ -38,7 +38,7 @@ const AuroraCard = () => {
 const NewCollection = () => {
   return (
     <section className="overflow-hidden bg-[#526f81] text-white">
-      <div className="max-w-[1700px] px-5 py-12 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16 2xl:px-20 p-10">
+      <div className="max-w-[1600px] px-5 py-12 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16 2xl:px-20">
         <div className="flex flex-col ">
           <div className="flex items-start justify-between gap-6 sm:mb-15 md:mb-12 lg:mb-14">
             <h2 className="shrink-0 font-display text-[clamp(38px,4.4vw,72px)] leading-[0.85] tracking-[-0.035em]">
