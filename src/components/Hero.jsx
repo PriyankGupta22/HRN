@@ -10,12 +10,12 @@ import {
 import background from "../assets/background.png";
 import person from "../assets/person.png";
 import ProductCard from "./ProductCard";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-[#304958] text-white">
 
-      {/* BACKGROUND */}
       <img
         src={background}
         alt=""
@@ -24,14 +24,13 @@ const Hero = () => {
 
       <div className="absolute inset-0 z-[1] bg-[#203746]/10" />
 
-      {/* NAVBAR */}
       <header className="absolute left-0 top-0 z-50 flex w-full items-start justify-between px-5 pt-6 sm:px-8 sm:pt-7 lg:px-12 lg:pt-8">
         <div className="font-display text-[25px] leading-none sm:text-[28px] lg:text-[30px]">
-          HΛN
+          HRN
         </div>
 
         <nav className="absolute left-1/2 top-7 hidden -translate-x-1/2 items-center gap-9 font-body text-[8px] uppercase tracking-[0.2em] text-white/75 md:flex lg:top-8 lg:gap-14 lg:text-[9px]">
-          <a href="#">Collection 1</a>
+          <Link to = "/shop">Shop</Link>
           <a href="#">Clothes</a>
           <a href="#">Collection</a>
           <a href="#">Features</a>
@@ -50,7 +49,6 @@ const Hero = () => {
 
       <div className="relative z-10 min-h-[100svh]">
 
-        {/* LEFT CONTENT */}
         <div className="absolute left-[4%] top-[28%] z-30 w-[40%] sm:top-[29%] sm:w-[37%] lg:top-[28%] lg:w-[34%]">
           <p className="mb-5 font-body text-[7px] uppercase tracking-[0.18em] text-white/55 sm:text-[8px] lg:mb-6 lg:text-[9px]">
             The future winter wear / 01 / series 01
